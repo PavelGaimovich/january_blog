@@ -1,0 +1,22 @@
+.row
+  .col-sm-6
+    %h1 Our Blogs!
+  .col-sm-6.text-right
+    = link_to 'New Blog', new_blog_path, class: 'btn btn-primary', style: 'margin-top:30px;'
+
+%table.table
+  %thead
+    %tr
+      %th User
+      %th Name
+      %th
+
+  %tbody
+    - @blogs.each do |blog|
+      %tr
+        %td= blog.user.email
+        %td= blog.name
+        %td.text-right
+          = link_to 'Show', blog, class: 'btn btn-default'
+          = link_to 'Edit', edit_blog_path(blog), class: 'btn btn-primary'
+          = link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'

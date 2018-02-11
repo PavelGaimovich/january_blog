@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|VT323');
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$headings-font-family: 'VT323', monospace;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Bootstrap theme
+@import "lumen/variables";
+@import "lumen/bootswatch";
+
+//Custom css
+@import "main";

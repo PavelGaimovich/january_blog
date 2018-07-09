@@ -19,9 +19,12 @@ module JanuaryBlog
     # -- all .rb files in that directory are automatically loaded.
     config.generators do |g|
       g.template_engine :haml
-      g.test_framework  false
+      g.test_framework  :rspec, fixture: false
       g.view_specs      false
       g.helper_specs    false
+      g.helper          false
+      g.stylesheets     false
+      g.javascripts     false
     end
   end
 end
